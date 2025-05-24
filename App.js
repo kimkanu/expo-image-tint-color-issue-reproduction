@@ -1,11 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
+import { Image } from 'expo-image';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Image source={require('./assets/images/emph__3x.webp')} style={styles.image} />
+      <Image source={require('./assets/images/emph__3x.webp')} style={[styles.image, styles.tintColor]} />
+      <Image source={require('./assets/images/emph__3x.webp')} style={styles.scaledImage} />
+      <Image source={require('./assets/images/emph__3x.webp')} style={[styles.scaledImage, styles.tintColor]} />
     </View>
   );
 }
@@ -16,5 +18,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
+    gap: 12,
+  },
+  image: {
+    width: 21,
+    height: 19,
+  },
+  tintColor: {
+    tintColor: 'black',
+  },
+  scaledImage: {
+    width: 21 * 3,
+    height: 19 * 3,
+    transform: [{ scale: 1/3 }],
   },
 });
