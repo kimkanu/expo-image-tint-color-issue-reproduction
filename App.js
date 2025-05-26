@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 export default function App() {
   return (
@@ -26,10 +26,5 @@ const styles = StyleSheet.create({
   },
   tintColor: {
     tintColor: 'black',
-  },
-  scaledImage: {
-    width: 21 * 3,
-    height: 19 * 3,
-    transform: [{ scale: 1/3 }],
   },
 });
