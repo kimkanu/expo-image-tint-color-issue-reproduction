@@ -6,8 +6,7 @@ export default function App() {
     <View style={styles.container}>
       <Image source={require('./assets/images/emph__3x.webp')} style={styles.image} />
       <Image source={require('./assets/images/emph__3x.webp')} style={[styles.image, styles.tintColor]} />
-      <Image source={require('./assets/images/emph__3x.webp')} style={styles.scaledImage} />
-      <Image source={require('./assets/images/emph__3x.webp')} style={[styles.scaledImage, styles.tintColor]} />
+      <Image source={require('./assets/images/emph__3x.webp')} style={styles.image} tintColor="black" />
     </View>
   );
 }
